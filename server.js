@@ -57,7 +57,7 @@ app.post('/webhook/whatsapp', async (req, res) => {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: `Analiza este texto financiero en español y extrae la información: "${userText}"`,
-      generationConfig: {
+      config: {
         responseMimeType: "application/json",
         responseSchema: {
           type: "OBJECT",
